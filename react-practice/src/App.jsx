@@ -3,6 +3,15 @@ import NewExpense from "./components/NewExpense/NewExpense";
 import "./App.css";
 
 const App = () => {
+  
+  const expenseHandler = (newExpense) => {
+    const expenseData = {
+      id: Math.ceil(Math.random()).toString(),
+      ...newExpense,
+    }
+    console.log(expenseData);
+    
+  }
   const expenses = [
     {
       id: "e1",
@@ -31,7 +40,7 @@ const App = () => {
   ];
   return (
     <div>
-      <NewExpense/>
+      <NewExpense addExpense={expenseHandler} />
       <Expense items={expenses} />
     </div>
   );
