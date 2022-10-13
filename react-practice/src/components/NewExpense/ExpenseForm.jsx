@@ -33,7 +33,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: newTitle,
       amount: newAmount,
-      date: newDate,
+      date: new Date(newDate),
     };
     props.SaveExpenseData(expenseData);
     //console.log(expenseData);
