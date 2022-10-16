@@ -25,9 +25,13 @@ function App() {
     setGoal(filteredList)
   }
   return (
-    <div>
-      <GoalInput getGoal={goalHandler} />
-      <GoalOutput delete={deletedList} values={goalList}></GoalOutput>
+    <div className="goal">
+      <div className="goal-inner">
+        <GoalInput getGoal={goalHandler} />
+      </div>
+      <div className="output">
+        <GoalOutput delete={deletedList} values={goalList}></GoalOutput>
+      </div>
     </div>
   );
 }

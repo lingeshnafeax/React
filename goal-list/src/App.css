@@ -1,0 +1,20 @@
+.goal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.goal-inner{
+    display: flex;
+    width:500px;
+    background-color: hotpink;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 30px;
+
+}
+.output{
+    background-color: grey;
+    width: 500px;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+.entergoal{
+    font-size:50px;
+    font-weight: bold;
+    text-align: center;
+    width:500px;
+    margin-bottom: 30px;
+}
+.search{
+    border-radius: 5px;
+    border-style: none;
+    margin-right: 20px;
+    padding-bottom: 7px;
+}
+.submit{
+background-color: white;
+border: none;
+padding: 7px;
+border-radius: 15px;
+}
