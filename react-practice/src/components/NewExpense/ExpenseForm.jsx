@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 const ExpenseForm = (props) => {
-  const [newTitle, setNewTitle] = useState("");    //setting state variable for three values
-  const [newAmount, setNewAmount] = useState("");    
-  const [newDate, setNewDate] = useState("");      
+  const [newTitle, setNewTitle] = useState(""); //setting state variable for three values
+  const [newAmount, setNewAmount] = useState("");
+  const [newDate, setNewDate] = useState("");
   //const [userInput, setUserInput] = useState({
   //  newTitle: "",
   //  newAmount: "",
@@ -13,7 +13,7 @@ const ExpenseForm = (props) => {
     //setUserInput((userInput) => {
     //  return { ...userInput, newTitle: event.target.value };
     //});
-    setNewTitle(event.target.value);  
+    setNewTitle(event.target.value);
   };
   const amountChangeHandler = (event) => {
     //setUserInput((userInput) => {
@@ -46,7 +46,12 @@ const ExpenseForm = (props) => {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" value={newTitle} onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={newTitle}
+            onChange={titleChangeHandler}
+            required
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -54,8 +59,9 @@ const ExpenseForm = (props) => {
             type="number"
             min="0.01"
             step="0.01"
-            value={newAmount}                 //two way binding
+            value={newAmount} //two way binding
             onChange={amountChangeHandler}
+            required
           />
         </div>
         <div className="new-expense__control">
@@ -66,11 +72,14 @@ const ExpenseForm = (props) => {
             max="2022-12-31"
             value={newDate}
             onChange={dateChangeHandler}
+            required
           />
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="button" onClick={props.onCancel}>Cancel</button>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
