@@ -13,8 +13,8 @@ const GoalInput = (props) => {
   return (
     <form onSubmit={msgSubmit}>
       <label>Enter Goal</label>
-      <input type="text" value={goalMsg} onChange={goalMsgHandler} />
-      <button type="submit">Sumbit</button>
+      <input type="text" value={goalMsg} onChange={goalMsgHandler} required/>
+      <button type="submit" >Add Goal</button>
     </form>
   );
 };
